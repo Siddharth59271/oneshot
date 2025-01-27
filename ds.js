@@ -36,42 +36,41 @@ function loadData() {
         })
         .catch(error => console.error('Error loading data:', error));
 }
-
 const search = () => {
     const searchbox = document.getElementById("search-item").value.toUpperCase();
     const storeitem = document.getElementById("data-list");
     const data = document.querySelectorAll(".data");
+    const anchors = storeitem.getElementsByTagName("a");
     const dname = storeitem.getElementsByTagName("h3");
 
     let exactMatches = [];
     let similarMatches = [];
 
-    for (var i = 0; i < dname.length; i++) {
-        let match = data[i].getElementsByTagName('h3')[0];
+    for (let i = 0; i < dname.length; i++) {
+        let match = dname[i].textContent || dname[i].innerText;
+        let anchor = anchors[i];
 
         if (match) {
-            let textvalue = match.textContent || match.innerHTML;
-
-            if (textvalue.toUpperCase() === searchbox) {
-                exactMatches.push(data[i]);
-            } else if (textvalue.toUpperCase().includes(searchbox)) {
-                similarMatches.push(data[i]);
+            if (match.toUpperCase() === searchbox) {
+                exactMatches.push(anchor);
+            } else if (match.toUpperCase().includes(searchbox)) {
+                similarMatches.push(anchor);
             } else {
-                data[i].style.display = "none";
+                anchor.style.display = "none";
             }
         }
     }
 
     // Show exact matches first
-    exactMatches.forEach(item => {
-        item.style.display = "";
-        storeitem.appendChild(item);
+    exactMatches.forEach(anchor => {
+        anchor.style.display = "";
+        storeitem.appendChild(anchor);
     });
 
     // Show similar matches after
-    similarMatches.forEach(item => {
-        item.style.display = "";
-        storeitem.appendChild(item);
+    similarMatches.forEach(anchor => {
+        anchor.style.display = "";
+        storeitem.appendChild(anchor);
     });
 };
 
