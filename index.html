@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ds .css">
+    
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1502979932800-33d311b7ce56?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3BlbiUyMGJvb2t8ZW58MHx8MHx8fDA%3D');
+            background-size: cover;
+        }
+        
+        a {
+            text-decoration: none; /* Removes underline */
+            color: inherit; /* Inherits the color from the parent element */
+        }
+    </style>
+</head>
+<body>
+    <script src="ds.js"></script>
+    <div class="my-box_1">
+        <div class="box_4">
+            <div class="box_2">
+                <h1>Subject</h1>
+                <form onsubmit="return false;">
+                    <input type="text" id="search-item" placeholder="Search..." onkeyup="search()">
+                    <ul id="search-results" class="hidden"></ul>
+                </form>
+                Enter your subject and enjoy all the one short<br> video
+            </div>
+            
+            <div class="box_3">
+                <div class="data-list" id="data-list">
+                    <!-- Data items will be loaded here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
