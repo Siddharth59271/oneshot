@@ -1,17 +1,25 @@
 .my-box_1 {
-    width: 810px ; 
-    height: 500px;  
-    background-color: lightgray; 
-    display: flex;
+    width: 810px;
+    height: 500px;
+    background-color: lightgray;
+    display: flex; /* Use flexbox for easier layout */
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 50px; 
+    margin-top: 100px;
+    margin-left: 300px;
+    padding: 50px;
     border-radius: 35px;
-    border: none; 
-    display: flex;  /* Use flexbox for easier layout */
-    
-  }
+    border: none;
+}
+/* Styles for mobile devices (width up to 768px) */
+@media (max-width: 768px) {
+    .my-box_1 {
+        margin-left: 10px; /* Margin for mobile devices */
+        margin-top: 250px;
+    }
+}    
+
   body {
     background-image: url('https://images.unsplash.com/photo-1502979932800-33d311b7ce56?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3BlbiUyMGJvb2t8ZW58MHx8MHx8fDA%3D');
     background-size: cover;
