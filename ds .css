@@ -1,17 +1,15 @@
 .my-box_1 {
     width: 810px ; 
-    height: 500px; 
-    border: 1px solid black; 
+    height: 500px;  
     background-color: lightgray; 
     display: flex;
     justify-content: center;
-    margin-top: 100%;
-    
+    flex-direction: column;
+    align-items: center;
     padding: 50px; 
     border-radius: 35px;
     border: none; 
-    
-    display: flex; /* Use flexbox for easier layout */
+    display: flex;  /* Use flexbox for easier layout */
     
   }
   body {
