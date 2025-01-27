@@ -1,0 +1,78 @@
+.my-box_1 {
+    width: 810px ; 
+    height: 500px; 
+    border: 1px solid black; 
+    background-color: lightgray; 
+    margin-top: 100px; 
+    margin-left: 300px;
+    padding: 50px; 
+    border-radius: 35px;
+    border: none; 
+    
+    display: flex; /* Use flexbox for easier layout */
+    
+  }
+
+.box_4 {
+    width: 820px;
+    height: 520px;
+    background-color: white;
+    margin-top: 5px;
+    border: none;
+    border-radius: 35px;
+    display: flex;
+}
+.box_2 {
+    width: 350px;
+    height: 450px;
+    background-color: white;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    border-radius: 35px;
+}
+.box_3 {
+    width: 390px;
+    height: 450px;
+    background-color: white;
+    margin-top: 25px;
+    margin-left: 0px;
+    margin-bottom: 25px;
+    overflow-y: scroll;
+    
+}
+.box_3::-webkit-scrollbar{
+    display: none;
+}
+.data img {
+    border-radius: 5px;
+    
+}
+.data{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.info {
+    margin-left: 10px;
+    margin-top: 1px;
+    
+}
+.search-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the container */
+}
+
+#search-item {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 50px; /* Adjust as needed */
+    width: 300px; /* Adjust width as needed */
+}
