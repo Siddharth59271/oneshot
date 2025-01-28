@@ -6,19 +6,28 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
-    margin-left: 300px;
     padding: 50px;
     border-radius: 35px;
     border: none;
+    margin: auto; /* Center the box horizontally */
+    position: absolute; /* Center the box vertically */
+    top: calc(50% + 25px); /* Adjust the vertical centering with some space */
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+
 /* Styles for mobile devices (width up to 768px) */
 @media (max-width: 768px) {
     .my-box_1 {
-        margin-left: 10px; /* Margin for mobile devices */
-        margin-top: 250px;
+        margin: 10px auto; /* Center the box with margin */
+        position: relative; /* Adjust position for mobile */
+        transform: translateY(350px); /* Add some spacing on top */
+        top: auto; /* Reset top for mobile */
+        left: auto; /* Reset left for mobile */
     }
-}    
+}
+
+
 
   body {
     background-image: url('https://images.unsplash.com/photo-1502979932800-33d311b7ce56?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8b3BlbiUyMGJvb2t8ZW58MHx8MHx8fDA%3D');
